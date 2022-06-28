@@ -91,6 +91,8 @@ router.get('/', (req, res) => {
           res.status(400).json(err);
         });
   })
+})
+
   
   router.put('/:id', (req,res) => {
     Post.update(
@@ -116,7 +118,7 @@ router.get('/', (req, res) => {
      });
 
   });
-
+  
   router.delete('/:id', (req, res) => {
     Post.destroy({
         where:{
@@ -135,6 +137,5 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     });
   });
-
 
 module.exports = router;
